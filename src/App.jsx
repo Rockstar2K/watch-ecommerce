@@ -1,24 +1,28 @@
 import React from 'react'
-import TituloPrincipal from './components/TituloPrincipal/TituloPrincipal'
-import Boton from './components/Boton/Boton'
-import ItemCount from './components/ItemCount/ItemCount'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home'
 
 const App = () => {
 
-  const celular= {
-    marca: "Samsung",
-    precio: 1000000,
-  }
 
   return (
     <>
+      {/* Add your NavBar or other common components outside of Routes */}
 
-      <NavBar/>
-      <ItemListContainer greeting="Mis productos"/>
-      
+      {/* Use BrowserRouter instead of Router */}
+      <BrowserRouter>
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={<h1>Home Page</h1>} />
+          <Route path="/about" element={<h1>About Page</h1>} />
+          <Route path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
+          
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
