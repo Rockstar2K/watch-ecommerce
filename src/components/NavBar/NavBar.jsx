@@ -2,6 +2,7 @@ import React from 'react'
 import "./NavBar.css"
 import CartWidget from '../CartWidget/CartWidget'
 import {Link, NavLink} from 'react-router-dom'
+import logoSvg from '../../../public/img/logo.svg'
 
 const NavBar = () => {
 
@@ -10,27 +11,27 @@ const NavBar = () => {
 
     <header>
       <Link to='/'>
-        <h1>Longines</h1> {/* add logo*/}
+        <img src={logoSvg} alt="" />
       </Link>
 
+        <div>
         <nav>
             <ul>
-                <li>
-                  <NavLink to='/'>Home</NavLink>
-                </li>
 
                 <li>
                   <NavLink to='/categoria/men'> Men</NavLink>
                 </li>
 
                 <li>
-                  <NavLink to='/'> Woman</NavLink>
+                  <NavLink to='/categoria/woman'> Woman</NavLink>
                 </li>
 
             </ul>
         </nav>
 
         <CartWidget/>
+        </div>
+   
 
     </header>
   )
