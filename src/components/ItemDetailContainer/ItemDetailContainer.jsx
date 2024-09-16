@@ -20,7 +20,12 @@ const ItemDetailContainer = () => {
   return (
     <div> 
         {/* displays the product */}
-        <ItemDetail {...product}></ItemDetail>
+        {/* Conditional rendering */}
+      {product ? (
+        <ItemDetail {...product} />
+      ) : (
+        <p>Loading...</p> // Optional loading indicator
+      )}
     </div>
   )
 }
