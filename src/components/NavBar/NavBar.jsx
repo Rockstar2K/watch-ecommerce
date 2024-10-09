@@ -11,7 +11,7 @@ const NavBar = () => {
 
     <header>
       <Link to='/'>
-        <img src={logoSvg} alt="" />
+        <img src={logoSvg} alt="Logo" />
       </Link>
 
         <div>
