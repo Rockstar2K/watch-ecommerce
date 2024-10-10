@@ -1,27 +1,27 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-
-//Estamos trabajando con un objeto con toda nnuestra informacion de la cuenta. Esta incluye la key ersonal de acceso a la BD.
+// Use environment variables for Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyDknKEB0woGOPMGBEXm14wvtzs2zBktcwk",
-    authDomain: "watch-ecommerce-pagella.firebaseapp.com",
-    projectId: "watch-ecommerce-pagella",
-    storageBucket: "watch-ecommerce-pagella.appspot.com",
-    messagingSenderId: "306818957341",
-    appId: "1:306818957341:web:5febca84b99754fe6d86f4"
-  };
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID
+};
 
-//Inicializamos Firebase y se pasa la configuracion como argumento
-//Esto retorna una instancia de Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
-export const db = getFirestore(app)
 
 //Exportamos esta referencia para que esté disponible en toda nuestra aplicacion
 
 
 //###############
+
+/*
 
 const myProducts = [
   { name: "Longines Legend Diver", stock: 100, price: 3800, img: "../public/img/legend-diver.avif", description: 'Ø 39.00 mm - Automatic Watch - Stainless Steel', idCategory: "men" },
@@ -52,3 +52,4 @@ const uploadProducts = async() => {
   }
 }
 
+*/
