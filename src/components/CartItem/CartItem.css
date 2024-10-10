@@ -1,3 +1,9 @@
+.cart-item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .delete-from-cart {
   background-color: white;
   padding: 0.2rem 1rem;

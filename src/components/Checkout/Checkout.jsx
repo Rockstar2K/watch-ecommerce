@@ -2,6 +2,7 @@ import { useState, useContext } from "react"
 import {CartContext} from "../../context/CartContext" 
 import { db } from "../../services/config"
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore"
+import './Checkout.css'
 
 const Checkout = () => {
     const [name, setName] = useState("")
@@ -92,20 +93,23 @@ const Checkout = () => {
     }
 
   return (
-    <div>
-        <h2> Checkout:</h2>
+    <div className="checkout-container">
+        <h2> Products </h2>
 
         <form onSubmit={formManager}>
             {   
                 cart.map(product => (
                     <div key={product.item.id}>
                         <p>{product.item.name}</p>
-                        <p>{product.item.price} x {product.quantity}</p>
-                        <p>{product.item.price}</p>
+                        <p>{product.item.price}€ x {product.quantity}</p>
+                        <p>{product.item.price}€</p>
                         <hr />
                     </div>
                 ))
             }
+            <div className="input-container">
+            <h2> Checkout Details</h2>
+
             <div>
                  <label htmlFor=""> Name </label>
                  <input type="text" onChange={(e)=>setName(e.target.value)} value={name} />                
@@ -136,6 +140,7 @@ const Checkout = () => {
                     <strong>¡Thank you for your purchase! Your order number is: {orderId}</strong>
                 )
             }
+            </div>
         </form>
         
     </div>
