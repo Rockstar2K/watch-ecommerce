@@ -18,15 +18,14 @@
 }
 
 .counter-container .counter-container_button button{
-    background-color: rgb(146, 146, 146);
+    background-color: rgb(199, 193, 193);
     margin: 0 0.5rem;
     min-width: 2rem;
     border-radius: 8px;
-    color: white;
 }
 
 .counter-container .counter-container_button button:hover{
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(157, 157, 157);
     color: white;
 }
 
