@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import {useParams} from 'react-router-dom'
-import { getAnItemById } from '../../asyncmock'
-import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
+import { db } from '../../services/config'
+import {getDoc, doc} from 'firebase/firestore'
 import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -11,16 +11,21 @@ const ItemDetailContainer = () => {
 
   const {idItem} = useParams();
 
-  useEffect(() => {
-    //we call the function with the item id and set it in useState
-    getAnItemById(idItem)
-    .then(res => setProduct(res))
+  useEffect(()=>{
+    const newDoc = doc(db, "products", idItem)
+
+    getDoc(newDoc)
+      .then(res => {
+        const data = res.data();
+        const newProducts = {id: res.id,...data}
+        setProduct(newProducts)
+      })
+      .catch(error => console.log(error))
   }, [idItem])
 
   return (
     <div> 
-        {/* displays the product */}
-        {/* Conditional rendering */}
+      
       {product ? (
         <ItemDetail {...product} />
       ) : (
