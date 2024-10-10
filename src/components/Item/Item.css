@@ -50,7 +50,7 @@
     color: #666666;
 }
 
-.cardProduct div{
+.cardProduct .background-img_div{
     background-color: #f5f5f5;
     border-radius: 500px;
     padding: 1rem;

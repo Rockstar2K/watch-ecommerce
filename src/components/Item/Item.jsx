@@ -4,7 +4,7 @@ import './Item.css'
 const Item = ({id, name, price, img, description}) => {
   return (
     <div className='cardProduct'>
-        <div>
+        <div className="background-img_div">
             <img className='item-img' src={img} alt={name} />
         </div>
         <h3 className='item-name'>{name}</h3>

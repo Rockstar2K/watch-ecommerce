@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import Counter from '../Counter/Counter'
-
+import './ItemDetail.css'
 
 
 const ItemDetail = ({id, name, price, img, stock, description}) => {
@@ -29,7 +29,7 @@ const ItemDetail = ({id, name, price, img, stock, description}) => {
 
 
   return (
-    <div className='cardProduct'>
+    <div className='item-detail-product_container'>
         <div>
             <img className='item-img' src={img} alt={name} />
         </div>
@@ -38,7 +38,7 @@ const ItemDetail = ({id, name, price, img, stock, description}) => {
         <p className='item-price'>{price}€</p>
         {
           //Acá empleamos la logica de montaje y desmotaje del contador
-          addQuantity > 0 ? (<Link to="/cart"> Terminar Compra</Link>
+          addQuantity > 0 ? (<Link to="/cart"> <button className='finish-purchase_button'>Finish Purchase</button></Link>
           ) : (
           <Counter initial={1} stock={stock} addFunction={quantityManager}/>)
         }

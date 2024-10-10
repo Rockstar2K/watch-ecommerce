@@ -22,15 +22,13 @@ const Checkout = () => {
 
         //verificamos que los campos esten completos:
         if(!name || !lastname || !phone || !email || !emailConfirmation) {
-            setError("Por favor completa todos los campos o moriras maldito!")
+            setError("Please fill up the checkout details for your purchase.")
             return;
         }
         
-    
-
         //validacion que los campos de email coincidan:
         if(email !== emailConfirmation){
-            setError("Los campos del email no coinciden, maildito insecto")
+            setError("The Email's doesnt match.")
             return;
         }
 
@@ -82,13 +80,13 @@ const Checkout = () => {
                 setError("") // Clear error after successful order
             })
             .catch(error => {
-                console.log("Error al crear la orden", error)
-                setError("Se producjo un error al crear la orden!")
+                console.log("There was an error creating the order.", error)
+                setError("There was an error creating the order.")
             })
         })
         .catch((error) => {
-            console.log("No se pudo actualizar el stock", error)
-            setError("No se puede actualziar el stock, intente en el supermercado Vital")
+            console.log("The stock couldn't be updated.", error)
+            setError("The stock couldn't be updated.")
         })
     }
 
@@ -138,7 +136,7 @@ const Checkout = () => {
                     error && <p style={{color:"red"}}> {error}</p>
                 }
 
-            <button type="submit"> Confirmar Compra </button>
+            <button type="submit"> Confirm Purchase </button>
             {
                 orderId && (
                     <strong>¡Thank you for your purchase! Your order number is: {orderId}</strong>
