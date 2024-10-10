@@ -97,16 +97,20 @@ const Checkout = () => {
         <h2> Products </h2>
 
         <form onSubmit={formManager}>
+            <div className='products-container'>
             {   
                 cart.map(product => (
                     <div key={product.item.id}>
-                        <p>{product.item.name}</p>
+                        <p><strong>{product.item.name}</strong></p>
                         <p>{product.item.price}€ x {product.quantity}</p>
-                        <p>{product.item.price}€</p>
                         <hr />
+                        <p><strong>{product.item.price}€</strong></p>
+    
                     </div>
                 ))
             }
+            </div>
+
             <div className="input-container">
             <h2> Checkout Details</h2>
 
