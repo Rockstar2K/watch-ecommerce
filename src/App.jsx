@@ -3,7 +3,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar'
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CarritoProvider } from "./context/CartContext";
+import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
 
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <CarritoProvider>
+        <CartProvider>
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/checkout" element={<Checkout/>}/>
             <Route path="*" element={ <h2> Site under construction</h2> }/>
           </Routes>
-        </CarritoProvider>
+        </CartProvider>
         <ToastContainer />
       </BrowserRouter>
     </>

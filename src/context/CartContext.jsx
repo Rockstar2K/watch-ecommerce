@@ -9,7 +9,7 @@ export const CartContext = createContext({
 });
 
 // 2) Create the CarritoProvider component that will wrap children and manage cart state.
-export const CarritoProvider = ({ children }) => {
+export const CartProvider = ({ children }) => {
 
   //3)cremamos el estado para el carrito, total, y cantidadTotal
   const [cart, setCart] = useState([]);
