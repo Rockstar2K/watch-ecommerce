@@ -1,0 +1,14 @@
+.delete-from-cart {
+  background-color: white;
+  padding: 0.2rem 1rem;
+  border-radius: 8px;
+  border: 1px solid red;
+  color: red;
+  width: 50%;
+}
+
+.delete-from-cart:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: red;
+}
