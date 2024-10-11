@@ -19,7 +19,7 @@ CSS Modules/Styled Components: For styling the application.
 
 ## Firebase example
 
-![products](./readme/products.png)
+![products](./public/readme/products.png)
 ![orders](./readme/orders.png)
 
 
