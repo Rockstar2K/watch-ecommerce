@@ -18,3 +18,8 @@
     border: 1px solid white;
     background-color: red;
 }
+
+.cart-item-container h3{
+  font-weight: 600;
+  
+}
