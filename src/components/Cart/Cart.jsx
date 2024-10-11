@@ -10,8 +10,10 @@ const Cart = () => {
  if (totalQuantity === 0) {
     return (
         <>
-            <h2>There is no products in the cart.</h2>
-            <Link to="/">See Products</Link>
+            <div className="cart-container">
+                <h2>There is no products in the cart.</h2>
+                <Link to="/"><button className="primary-button">See Products</button></Link>
+            </div>
         </>
 
     )
