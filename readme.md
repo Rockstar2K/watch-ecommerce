@@ -27,33 +27,26 @@ Ensure you have Node.js and npm installed.
 bash
 Copy code
 git clone https://github.com/username/watchify.git
-Navigate to the project directory:
+
+
+### Navigate to the project directory:
 
 bash
 Copy code
 cd watchify
-Install the dependencies:
+
+### Install the dependencies:
 
 bash
 Copy code
 npm install
-Set up environment variables. Create a .env file in the root directory with your environment-specific keys:
 
-makefile
-Copy code
+### Set up environment variables. Create a .env file in the root directory with your environment-specific keys:
+
 REACT_APP_API_URL=your_api_url
 REACT_APP_STRIPE_KEY=your_stripe_key
-Usage
+
+## Usage
 To run the app in development mode:
 
-bash
-Copy code
-npm start
-The app will be running at http://localhost:3000.
-
-For production, build the app:
-
-bash
-Copy code
-npm run build
-Then serve the static files from the /build folder.
+npm run dev
