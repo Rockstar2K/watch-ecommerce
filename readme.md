@@ -19,8 +19,8 @@ CSS Modules/Styled Components: For styling the application.
 
 ## Firebase example
 
-![products](./assets/products.png)
-![orders](./assets/orders.png)
+![products](./readme/products.png)
+![orders](./readme/orders.png)
 
 
 ## Installation
