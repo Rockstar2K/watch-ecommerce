@@ -18,11 +18,11 @@ const NavBar = () => {
             <ul>
 
                 <li>
-                  <NavLink to='/categoria/men'> Men</NavLink>
+                  <NavLink to='/category/men'> Men</NavLink>
                 </li>
 
                 <li>
-                  <NavLink to='/categoria/woman'> Woman</NavLink>
+                  <NavLink to='/category/woman'> Woman</NavLink>
                 </li>
 
             </ul>
