@@ -10,7 +10,7 @@ const NavBar = () => {
 
     <header>
       <Link to='/'>
-        <img src="/assets/logo.svg" alt="Longines Logo" />
+        <img class="logo-icon_navbar" src="/assets/logo.svg" alt="Longines Logo" />
       </Link>
 
         <div>
@@ -18,11 +18,11 @@ const NavBar = () => {
             <ul>
 
                 <li>
-                  <NavLink to='/category/men'> Men</NavLink>
+                  <NavLink to='/category/men'>Men</NavLink>
                 </li>
 
                 <li>
-                  <NavLink to='/category/woman'> Woman</NavLink>
+                  <NavLink to='/category/woman'>Woman</NavLink>
                 </li>
 
             </ul>

@@ -8,6 +8,7 @@ header {
     color: #013150;
     border-bottom: solid 1.5px #c8c8c8;
     font-size: 16px;
+    max-height: 4rem;
 }
 
 li{
@@ -19,4 +20,8 @@ header div {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo-icon_navbar{
+    width: 6rem;
 }
