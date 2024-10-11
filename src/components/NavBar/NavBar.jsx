@@ -2,7 +2,6 @@ import React from 'react'
 import "./NavBar.css"
 import CartWidget from '../CartWidget/CartWidget'
 import {Link, NavLink} from 'react-router-dom'
-import logoSvg from '../../../public/img/logo.svg'
 
 const NavBar = () => {
 
@@ -11,7 +10,7 @@ const NavBar = () => {
 
     <header>
       <Link to='/'>
-        <img src={logoSvg} alt="Logo" />
+        <img src="/assets/longines-logo.svg" alt="Logo" />
       </Link>
 
         <div>
