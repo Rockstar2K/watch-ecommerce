@@ -17,6 +17,11 @@ A modern and responsive e-commerce platform for purchasing luxury watches, built
 React Router: For navigating between pages.
 CSS Modules/Styled Components: For styling the application.
 
+## Firebase example
+
+![products](./assets/products.png)
+![orders](./assets/orders.png)
+
 
 ## Installation
 ### Prerequisites
