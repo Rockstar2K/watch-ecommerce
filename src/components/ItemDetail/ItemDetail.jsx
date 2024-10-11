@@ -31,11 +31,11 @@ const ItemDetail = ({id, name, price, img, stock, description}) => {
   return (
     <div className='item-detail-product_container'>
         <div>
-            <img className='item-img' src={img} alt={name} />
+            <img className='item-detail_img' src={img} alt={name} />
         </div>
-        <h3 className='item-name'>{name}</h3>
-        <p className='item-description'>{description}</p>
-        <p className='item-price'>{price}€</p>
+        <h3 className='item-detail_name'>{name}</h3>
+        <p className='item-detail_description'>{description}</p>
+        <p className='item-detail_price'>{price}€</p>
         {
           //Acá empleamos la logica de montaje y desmotaje del contador
           addQuantity > 0 ? (<Link to="/cart"> <button className='finish-purchase_button'>Finish Purchase</button></Link>
