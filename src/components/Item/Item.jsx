@@ -4,9 +4,11 @@ import './Item.css'
 const Item = ({id, name, price, img, description}) => {
   return (
     <div className='cardProduct'>
-        <div className="background-img_div">
-            <img className='item-img' src={img} alt={name} />
-        </div>
+        <Link to={`/item/${id}`}>
+          <div className="background-img_div">
+              <img className='item-img' src={img} alt={name} />
+          </div>
+        </Link>
         <h3 className='item-name'>{name}</h3>
         <p className='item-description'>{description}</p>
         <p className='item-price'>{price}€</p>
