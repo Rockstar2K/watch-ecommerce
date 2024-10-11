@@ -1,3 +1,13 @@
-.cart {
+.cart-logo_img {
     width: 1.5rem;
+}
+
+.total-quantity_span{
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5rem;
+    min-height: 1rem;
+    min-width: 1.5rem;
+    text-align: center;
+
 }

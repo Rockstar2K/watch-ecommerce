@@ -31,14 +31,14 @@
 
 .add-to-the-cart_button{
     background-color: white;
-    border: 1px solid blue;
+    border: 1px solid var(--primary-color);
     padding: 0.2rem 2rem;
     border-radius: 8px;
-    color: blue;
+    color: var(--primary-color)var(--primary-color);
 }
 
 .add-to-the-cart_button:hover{
-    background-color: blue;
+    background-color: var(--primary-color);
     border: 1px solid white;
     color: white;
 }

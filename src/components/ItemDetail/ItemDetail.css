@@ -15,7 +15,6 @@
 .item-detail-product_container .item-img {
   width: 150px;
   object-fit: contain;
-  transition: 0.2s ease-in-out;
 }
 
 .item-detail-product_container .item-img:hover {
@@ -31,7 +30,6 @@
   border: none;
   padding: 0.2rem 1.2rem;
   border: solid 1px #cdcdcd;
-  transition: 0.2s ease-in-out;
 }
 
 .item-detail-product_container .item-button:hover {
@@ -57,14 +55,14 @@
 
 .finish-purchase_button {
   background-color: white;
-  border: 1px solid blue;
+  border: 1px solid var(--primary-color);
   padding: 0.2rem 2rem;
   border-radius: 8px;
-  color: blue;
+  color: var(--primary-color);
 }
 
 .finish-purchase_button:hover {
-  background-color: blue;
+  background-color: var(--primary-color);
   border: 1px solid white;
   color: white;
 }
