@@ -10,7 +10,7 @@ const NavBar = () => {
 
     <header>
       <Link to='/'>
-        <img src="/assets/longines-logo.svg" alt="Logo" />
+        <img src="/assets/logo.svg" alt="Longines Logo" />
       </Link>
 
         <div>
